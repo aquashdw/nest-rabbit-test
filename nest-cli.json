@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/nest-rabbit-test/src",
+  "monorepo": true,
+  "root": "apps/nest-rabbit-test",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/nest-rabbit-test/tsconfig.app.json"
+  },
+  "projects": {
+    "nest-rabbit-test": {
+      "type": "application",
+      "root": "apps/nest-rabbit-test",
+      "entryFile": "main",
+      "sourceRoot": "apps/nest-rabbit-test/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nest-rabbit-test/tsconfig.app.json"
+      }
+    },
+    "queue-prod": {
+      "type": "application",
+      "root": "apps/queue-prod",
+      "entryFile": "main",
+      "sourceRoot": "apps/queue-prod/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/queue-prod/tsconfig.app.json"
+      }
+    }
+  }
+}
