@@ -30,14 +30,14 @@ export class ExchangePublishController {
           eventId: eventPayloadDto.eventId,
           eventMessage: eventPayloadDto.eventMessage,
           eventTimeString: eventPayloadDto.eventTimeString
-        }, 'nest.direct.route');
+        }, eventPayloadDto.routingKey);
         break;
       case 'topic':
         await this.exchangePublishService.postToTopic({
           eventId: eventPayloadDto.eventId,
           eventMessage: eventPayloadDto.eventMessage,
           eventTimeString: eventPayloadDto.eventTimeString
-        }, 'nest.topic.route');
+        }, eventPayloadDto.routingKey);
         break;
     }
   }

@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ExchangePublishController } from './exchange-publish.controller';
-import { ExchangePublishService } from './exchange-publish.service';
+import { ExchangeSubscribeService } from './exchange-subscribe.service';
 import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
 
 @Module({
@@ -24,7 +23,7 @@ import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
       wait: false
     }
   })],
-  controllers: [ExchangePublishController],
-  providers: [ExchangePublishService],
+  controllers: [],
+  providers: [ExchangeSubscribeService],
 })
-export class ExchangePublishModule {}
+export class ExchangeSubscribeModule {}

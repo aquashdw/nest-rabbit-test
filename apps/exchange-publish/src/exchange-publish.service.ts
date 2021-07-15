@@ -13,16 +13,16 @@ export class ExchangePublishService {
 
   async postToFanout(dto: EventDto) {
     this.logger.log('publish to fanout');
-    await this.amqpConnection.publish('nest-fanout-exchange', '', dto);
+    await this.amqpConnection.publish('nest.fanout.exchange', '', JSON.stringify(dto));
   }
 
   async postToDirect(dto: EventDto, routingKey: string) {
     this.logger.log('publish to direct');
-    await this.amqpConnection.publish('nest-direct-exchange', routingKey, dto);
+    await this.amqpConnection.publish('nest.direct.exchange', routingKey, JSON.stringify(dto));
   }
 
   async postToTopic(dto: EventDto, routingKey: string) {
     this.logger.log('publish to topic');
-    await this.amqpConnection.publish('nest-topic-exchange', routingKey, dto);
+    await this.amqpConnection.publish('nest.topic.exchange', routingKey, JSON.stringify(dto));
   }
 }

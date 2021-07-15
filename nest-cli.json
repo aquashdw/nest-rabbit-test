@@ -43,6 +43,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/exchange-publish/tsconfig.app.json"
       }
+    },
+    "exchange-subscribe": {
+      "type": "application",
+      "root": "apps/exchange-subscribe",
+      "entryFile": "main",
+      "sourceRoot": "apps/exchange-subscribe/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/exchange-subscribe/tsconfig.app.json"
+      }
     }
   }
 }
