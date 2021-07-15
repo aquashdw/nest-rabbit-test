@@ -9,8 +9,6 @@ export class QueueConsController {
 
   @EventPattern('work_jobs')
   async handleMessagePrinted(dto: JobSpecDto) {
-    console.log(dto.id);
-    console.log(dto.message);
-    console.log(dto.wait);
+    await this.queueConsService.processJob(dto);
   }
 }
