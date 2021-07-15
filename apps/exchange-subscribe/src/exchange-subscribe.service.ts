@@ -10,7 +10,10 @@ export class ExchangeSubscribeService {
   @RabbitSubscribe({
     exchange: 'nest.fanout.exchange',
     routingKey: '',
-    queue: `fanout-${randomUUID()}`
+    queue: `fanout-${randomUUID()}`,
+    queueOptions: {
+      autoDelete: true
+    }
   })
   async fanoutSubHandler(dto: EventDto){
     this.logger.log(`received message from fanout exchange: ${JSON.stringify(dto)}`)
@@ -19,7 +22,10 @@ export class ExchangeSubscribeService {
   @RabbitSubscribe({
     exchange: 'nest.direct.exchange',
     routingKey: 'test.direct.route',
-    queue: `direct-${randomUUID()}`
+    queue: `direct-${randomUUID()}`,
+    queueOptions: {
+      autoDelete: true
+    }
   })
   async directSubHandler(dto: EventDto){
     this.logger.log(`received message from direct exchange: ${JSON.stringify(dto)}`)
@@ -28,7 +34,10 @@ export class ExchangeSubscribeService {
   @RabbitSubscribe({
     exchange: 'nest.topic.exchange',
     routingKey: 'test.topic.*',
-    queue: `topic-${randomUUID()}`
+    queue: `topic-${randomUUID()}`,
+    queueOptions: {
+      autoDelete: true
+    }
   })
   async topicSubHandler(dto: EventDto){
     this.logger.log(`received message from topic exchange: ${JSON.stringify(dto)}`)
