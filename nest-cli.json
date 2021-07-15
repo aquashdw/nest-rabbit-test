@@ -25,6 +25,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/queue-prod/tsconfig.app.json"
       }
+    },
+    "queue-cons": {
+      "type": "application",
+      "root": "apps/queue-cons",
+      "entryFile": "main",
+      "sourceRoot": "apps/queue-cons/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/queue-cons/tsconfig.app.json"
+      }
     }
   }
 }
