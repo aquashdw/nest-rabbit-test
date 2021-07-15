@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { ExchangePublishModule } from './../src/ExchangePublish.module';
+import { ExchangePublishModule } from '../src/exchange-publish.module';
 
 describe('ExchangePublishController (e2e)', () => {
   let app: INestApplication;

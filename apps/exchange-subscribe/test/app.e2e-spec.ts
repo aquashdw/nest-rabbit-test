@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { ExchangeSubscribeModule } from './../src/ExchangeSubscribe.module';
+import { ExchangeSubscribeModule } from '../src/exchange-subscribe.module';
 
 describe('ExchangeSubscribeController (e2e)', () => {
   let app: INestApplication;

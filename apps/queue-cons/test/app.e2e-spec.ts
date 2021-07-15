@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { QueueConsModule } from './../src/QueueCons.module';
+import { QueueConsModule } from '../src/queue-cons.module';
 
 describe('QueueConsController (e2e)', () => {
   let app: INestApplication;
