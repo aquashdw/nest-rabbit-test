@@ -4,7 +4,7 @@ import { AmqpConnection } from '@golevelup/nestjs-rabbitmq';
 
 @Injectable()
 export class ExchangePublishService {
-  private readonly logger = new Logger();
+  private readonly logger = new Logger(ExchangePublishService.name);
   constructor(private readonly amqpConnection: AmqpConnection) {}
 
   getHello(): string {

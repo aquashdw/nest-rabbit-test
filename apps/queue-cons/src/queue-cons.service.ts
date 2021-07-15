@@ -3,7 +3,7 @@ import { JobSpecDto } from './dto/job-spec.dto';
 
 @Injectable()
 export class QueueConsService {
-  private readonly logger: Logger = new Logger();
+  private readonly logger: Logger = new Logger(QueueConsService.name);
 
   async processJob(dto: JobSpecDto){
     this.logger.log('start process');

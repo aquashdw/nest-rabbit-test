@@ -5,7 +5,7 @@ import { EventDto } from './dto/event.dto';
 
 @Injectable()
 export class ExchangeSubscribeService {
-  private readonly logger = new Logger();
+  private readonly logger = new Logger(ExchangeSubscribeService.name);
 
   @RabbitSubscribe({
     exchange: 'nest.fanout.exchange',

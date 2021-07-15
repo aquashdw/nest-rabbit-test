@@ -4,7 +4,7 @@ import { EventPayloadDto } from '../dto/event-payload.dto';
 
 @Controller()
 export class ExchangePublishController {
-  private readonly logger = new Logger()
+  private readonly logger = new Logger(ExchangePublishController.name)
 
   constructor(private readonly exchangePublishService: ExchangePublishService) {}
 
