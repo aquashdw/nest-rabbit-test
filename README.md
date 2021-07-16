@@ -1,3 +1,12 @@
+# nest-rabbit-test
+
+A simple monorepo to test nestJS RabbitMQ integration.
+Used `@nestjs/microservices` and `@golevelup/nestjs-rabbitmq`.
+
+Below are auto-generated with `nest new`.
+
+--- 
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
